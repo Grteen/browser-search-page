@@ -1,0 +1,57 @@
+@keyframes show-slowly {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes change-color-search {
+    from {
+        background-color: rgba(244, 244, 244, 0.422);;
+    }
+
+    to {
+        background-color: rgba(255, 208, 202, 0.893);
+    }
+}
+
+@keyframes search-button-clicked {
+    from {
+        right: 3%;
+        top: -5px;
+    }
+
+    to {
+        right: 3%;
+        top: -20px;
+    }
+}
+
+@keyframes QroleDrop {
+    from {
+        bottom: 1000px;
+        animation-timing-function: ease-in;
+    }
+
+    25% , 60% , 90% , to{
+        bottom: 50px;
+        animation-timing-function: ease-out;
+    }
+
+    37.5% {
+        bottom: 50%;
+        animation-timing-function: ease-in;
+    }
+
+    75% {
+        bottom: 25%;
+        animation-timing-function: ease-in;
+    }
+
+    95% {
+        bottom: 10%;
+        animation-timing-function: ease-in;
+    }
+}

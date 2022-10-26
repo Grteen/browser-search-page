@@ -1,0 +1,119 @@
+@import "./animation.less";
+@import "./font-style.less";
+
+body {
+    margin: 0;
+}
+
+.MainBox {
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    width: 100%;
+}
+
+.MainSearch {
+    width: 600px;
+    height: 200px;
+    background-color: transparent;
+    position: fixed;
+    right: 3%;
+    top: 35%;
+}
+
+.Search {
+    width: 90%;
+    height: 25%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(244, 244, 244, 0.422);
+    border: 2px black solid;
+    border-radius: 50px;
+    animation: show-slowly 3s 0.5s backwards;
+}
+
+.Search-Text {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 25px;
+    font-family: search-font;
+    color: rgb(79, 79, 77);
+    width: 70%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    margin: auto;
+}
+
+.Search:focus-within {
+    animation: change-color-search 2s both;
+}
+
+.Search-Submit {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 3%;
+    top: -5px;
+    background-color: transparent;
+    background-image: url(./image/Search-Button.png);
+    background-size: cover;
+}
+
+.Search-Submit:active {
+    animation: search-button-clicked 0.02s;
+}
+
+.QroleMainPort {
+    width: 350px;
+    height: 150px;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    animation: QroleDrop 3s ease-in;
+}
+
+.Qrole {
+    width: 150px;
+    height: 150px;
+    background-image: url(./image/Search-Button.png);
+}
+
+.QroleContent {
+    width: 220px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.758);
+    border: 2px black solid;
+    border-radius: 15px;
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    animation: show-slowly 2s 3s backwards;
+}
+
+.Content {
+    line-height: 50px;
+    width: 220px;
+    height: 50px;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
