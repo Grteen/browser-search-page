@@ -69,3 +69,37 @@
     opacity: 1;
   }
 }
+@keyframes signInButtonHover {
+  from {
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 0px #bfa;
+  }
+  to {
+    width: 175px;
+    height: 175px;
+    box-shadow: 0 0 30px #bfa;
+  }
+}
+@keyframes signInButtonShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes signInButtonClick {
+  from {
+    width: 150px;
+    height: 150px;
+    right: 115px;
+    bottom: 40px;
+  }
+  to {
+    width: 100px;
+    height: 100px;
+    right: 0px;
+    bottom: 15px;
+  }
+}

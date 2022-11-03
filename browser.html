@@ -10,6 +10,7 @@
     <script src="./helicopter.js"></script>
     <script src="./time.js"></script>
     <script src="./list.js"></script>
+    <script src="./luck.js"></script>
     <script>
         window.onload = function() {
             document.oncontextmenu = function(e){
@@ -18,7 +19,9 @@
 
             document.body.onmousemove = helicopter;
             setInterval(setTimer , 1000);
+            setDater();
             setFunctionForList();
+            setFunctionForLuck();
         }
     </script>
 </head><em</em>
@@ -53,6 +56,27 @@
                 <div class="TimeTag"></div>
             </div>
             <div class="TaskBox">
+            </div>
+        </div>
+        <div class="LuckyBox">
+            <div class="SignInBox">
+                <div class="Date">
+                    0000 : 00 : 00
+                </div>
+                <div class="SignInButton"></div>
+            </div>
+            <div class="Lucky">
+                <div class="LuckContentBox">
+                    <div class="LuckyDegree">
+                        A
+                    </div>
+                    <div class="LuckyContent">
+                        <div class="List" id="firstList"></div>
+                        <div class="List" id="secondList"></div>
+                        <div class="List" id="thirdList"></div>
+                        <div class="List" id="fourthList"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
