@@ -29,14 +29,14 @@
     bottom: 1000px;
     animation-timing-function: ease-in;
   }
-  40%,
+  25%,
   60%,
   90%,
   to {
     bottom: 50px;
     animation-timing-function: ease-out;
   }
-  50% {
+  37.5% {
     bottom: 50%;
     animation-timing-function: ease-in;
   }
@@ -47,6 +47,26 @@
   95% {
     bottom: 10%;
     animation-timing-function: ease-in;
+  }
+}
+@keyframes TimeBoxShow {
+  from {
+    top: 60px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes TaskListFolderShow {
+  from {
+    left: 80px;
+    opacity: 0;
+  }
+  to {
+    left: 100px;
+    opacity: 1;
   }
 }
 @font-face {
@@ -156,4 +176,160 @@ body {
   bottom: 0;
   margin: auto;
   text-align: center;
+}
+.helicopter {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-image: url(video/helicopter.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.TimeTaskBox {
+  width: 700px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.TimeBox {
+  width: 300px;
+  height: 180px;
+  position: relative;
+  animation: TimeBoxShow 2s;
+}
+.TimeTag {
+  width: 120px;
+  height: 180px;
+  background-image: url(image/Time-Tag.png);
+  background-size: 120px 180px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.TimeTextBackground {
+  width: 700px;
+  height: 60px;
+  background-image: url(image/Time-Background.png);
+  background-size: 700px 60px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 60px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0.7;
+}
+.TimeText {
+  width: 300px;
+  height: 60px;
+  font-size: 60px;
+  color: #8fc1f7;
+  font-weight: bold;
+  line-height: 60px;
+  position: absolute;
+  left: 60px;
+}
+.TaskBox {
+  width: 700px;
+  height: auto;
+  position: relative;
+  top: -50px;
+}
+.TaskBox::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.TaskListFolder {
+  width: 400px;
+  height: 60px;
+  position: relative;
+  left: 100px;
+  overflow: hidden;
+  animation: TaskListFolderShow 1s 1s backwards;
+}
+.TaskList {
+  width: auto;
+  height: 60px;
+  position: relative;
+}
+.TaskList:hover {
+  background-color: rgba(255, 255, 255, 0.156);
+}
+.Space {
+  width: auto;
+  height: 60px;
+}
+.Task {
+  width: auto;
+  height: 45px;
+  position: relative;
+  left: 35px;
+}
+.Task:hover {
+  background-color: rgba(255, 255, 255, 0.156);
+}
+.ListTagFolder {
+  width: 40px;
+  height: 50px;
+  background-image: url(image/ListFolder-Tag.png);
+  position: absolute;
+  background-size: cover;
+  top: 5px;
+}
+.AddTask {
+  background-image: url(image/Add_Task_Tag.png);
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+}
+.TaskText {
+  width: auto;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  line-height: 60px;
+  font-size: 30px;
+  left: 50px;
+}
+.ListTag {
+  width: 40px;
+  height: 50px;
+  background-image: url(image/List-Tag.png);
+  position: absolute;
+  background-size: cover;
+}
+.Icon {
+  width: 40px;
+  height: 40px;
+  background-size: 30px 30px;
+  background-position: 5px , 5px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.ListText {
+  width: auto;
+  height: 40px;
+  position: absolute;
+  line-height: 40px;
+  font-size: 20px;
+  left: 100px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }

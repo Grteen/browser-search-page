@@ -6,11 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browser</title>
     <link rel="stylesheet" href="browser.css">
+
+    <script src="./helicopter.js"></script>
+    <script src="./time.js"></script>
+    <script src="./list.js"></script>
+    <script>
+        window.onload = function() {
+            document.oncontextmenu = function(e){
+                e.preventDefault();
+            };
+
+            document.body.onmousemove = helicopter;
+            setInterval(setTimer , 1000);
+            setFunctionForList();
+        }
+    </script>
 </head><em</em>
 <body>
     <!-- contain all contents and set the background img -->
     <div class="MainBox">
         <video class="background" src="./video/background-nagato.mp4" autoplay loop muted=“muted”></video>
+        <div class="helicopter"></div>
         <div class="MainSearch">
             <div class="Search">
                 <form action="https://www.baidu.com/s?" autocomplete="off">
@@ -25,6 +41,18 @@
                 <div class="Content">
                     萝莉控真下头...
                 </div>
+            </div>
+        </div>
+        <div class="TimeTaskBox">
+            <div class="TimeBox">
+                <div class="TimeTextBackground">
+                    <div class="TimeText">
+                        00 : 00 : 00
+                    </div>
+                </div>
+                <div class="TimeTag"></div>
+            </div>
+            <div class="TaskBox">
             </div>
         </div>
     </div>
